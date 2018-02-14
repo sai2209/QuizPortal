@@ -1,0 +1,27 @@
+﻿@{
+    ViewBag.Title = "Create Quiz";
+}
+<style>
+    .button {
+         background-color: cadetblue; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:15px;
+    }
+</style>
+<body>
+
+    @using(Html.BeginForm(FormMethod.Post))
+    {
+
+    <input type="submit" value="Create Quiz" class="button" formaction="@Url.Action("OpenCreateQuiz","CreateQuiz")"/>
+        <input type="submit" value="Take Exam" class="button" formaction="@Url.Action("SelectQuiz","TakeExam")"/>
+    }
+    </body>

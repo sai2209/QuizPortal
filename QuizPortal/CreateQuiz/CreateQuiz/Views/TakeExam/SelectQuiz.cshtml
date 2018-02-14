@@ -1,0 +1,46 @@
+﻿@model BusinessLayer.GetQuizList
+
+@{
+    ViewBag.Title = "SelectQuiz";
+}
+<style>
+    .button {
+         background-color: cadetblue; /* Green */
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:15px;
+    }
+
+    .Dropdown {
+    position: relative;
+    width: 150px;
+    height:25px;
+    margin: 0 auto;
+    padding: 3px;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0,0,0.15);
+    box-shadow: 0 1px 1px rgba(50,50,50,0.1);
+    cursor: pointer;
+    outline: none;
+    font-weight: bold;
+    color: #8AA8BD;
+    }
+</style>
+
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+<div>
+   <h2>Select Quiz</h2>
+    @Html.DropDownList("Quiz", null, new { @class = "Dropdown" })<br /><br />
+     <input type="submit" value="Take Exam" class="button" formaction="@Url.Action("GetQuestions1","TakeExam")"/>
+</div>
+}

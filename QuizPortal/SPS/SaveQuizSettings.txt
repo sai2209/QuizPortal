@@ -1,0 +1,16 @@
+ ALTER procedure [dbo].[spSaveQuizSettings]
+  @Quiztype varchar(20),
+ @QuizGroup varchar(20),
+ @Name varchar(20),
+ @Shuffleanswers varchar(3),
+ @Timelimit varchar(3),
+ @Minut varchar(5),
+ @Studentsseequiz varchar(3),
+ @Showcrctans varchar(3),
+ @Allowmultattempt varchar(3),
+ @Showoneques varchar(3),
+ @RestQuiz varchar(3)
+ as
+ begin
+  insert into QuizSettings(Quiztype ,QuizGroup,Name ,Shuffleanswers,Timelimit,Minut,Studentsseequiz ,Showcrctans ,Allowmultattempt ,Showoneques,RestQuiz) values (@Quiztype,@QuizGroup,@Name,@Shuffleanswers,@Timelimit, @Minut,@Studentsseequiz,@Showcrctans,@Allowmultattempt,@Showoneques,@RestQuiz)
+ end

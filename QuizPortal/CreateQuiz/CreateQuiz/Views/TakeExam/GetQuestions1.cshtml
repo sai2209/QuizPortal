@@ -1,0 +1,107 @@
+﻿@model BusinessLayer.GetQuizList
+
+@{
+    ViewBag.Title = "Quiz";
+}
+<script src='@Url.Content("~/Scripts/jquery-1.8.2.js")' type='text/javascript'></script>
+<script src='@Url.Content("~/Scripts/jquery.validate.js")' type='text/javascript'>         </script>
+<script src='@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")' type='text/javascript'></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/MicrosoftAjax.js"></script>
+<script src="~/Scripts/MicrosoftMvcAjax.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="~/Js/QuizQuestion1.js"></script>
+<style>
+    .TextboxArea {
+        box-shadow: 1px 1px 10px #333;
+        transition: 200ms all ease;
+        border: none;
+        padding: 3px 2px;
+        width: 70%;
+        height: 100px;
+        border-radius: 5px;
+    }
+
+      .button {
+        background-color: cadetblue; /* Green */
+        border: none;
+        color: white;
+        padding: 6px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 15px;
+        width:100px;
+    }
+    .question {
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 25px;
+    }
+
+    .quizAreaDiv {
+    background-color: #b3b3ff;
+    width: 50%;
+    border-radius: 10px;
+    padding-left: 50px;
+    }
+
+    .ShowResult {
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    z-index: 15;
+    top: 30%;
+    left: 50%;
+    margin: -100px 0 0 -150px;
+    background: palevioletred;
+    }
+
+</style>
+<script>
+    var EndQuiz = '@(ViewBag.ShowEndQuiz)';
+    var DisplayScore = '@(ViewBag.DisplayScore)';
+    var SelectedAnswer = '@(ViewBag.SelectedAnswer)';
+</script>
+ <h2>Quiz</h2>
+<br /><br />
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <div id="QuizDiv" class="quizAreaDiv">
+        @if (ViewBag.AllQuestions != null)
+        {    
+            <input type="hidden" id="hdnIndex" value= '@ViewBag.Index' name="hdnIndex" />     
+               @Html.Label((string)@ViewBag.AllQuestions.Question, new { @class = "question", @readonly = true })<br /><br /><br />
+               <input type="radio" name="radiog_lite" id="1" value="1" class="css-checkbox" /><label for="1" class="css-label radGroup1">@ViewBag.AllQuestions.Answer1</label><br /><br />
+               <input type="radio" name="radiog_lite" id="2" value="2" class="css-checkbox" /><label for="2" class="css-label radGroup1">@ViewBag.AllQuestions.Answer2</label><br /><br />
+               <input type="radio" name="radiog_lite" id="3" value="3" class="css-checkbox" /><label for="3" class="css-label radGroup1">@ViewBag.AllQuestions.Answer3</label><br /><br />
+               <input type="radio" name="radiog_lite" id="4" value="4" class="css-checkbox" /><label for="4" class="css-label radGroup1">@ViewBag.AllQuestions.Answer4</label> <br /><br /><br /><br />
+               @*<input type="button" id="NextQuestion" value="Next Question" class="button" onclick="GetNextQuestion()"/>*@
+              <div style="padding-left: 30%;">
+               <input type="submit" value="Previous" id="Previous" class="button" formaction="@Url.Action("GetQuestions1", "TakeExam", new { id = "Prev" })" />
+               <input type="submit" value="Next   " id="Next" class="button" formaction="@Url.Action("GetQuestions1", "TakeExam", new { id = "Next" })" />
+               <input type="submit" value="EndQuiz" id="EndQuiz" class="button" style="visibility:hidden" formaction="@Url.Action("GetQuestions1", "TakeExam")" />   
+                  </div>
+        }
+        </div>
+            
+    <div id="showResult"  style="visibility:hidden">
+        <input type="submit" value="Exit Quiz   " id="Exit" class="button" style="position:absolute;left:70%;top:10px" formaction="@Url.Action("Index", "CreateQuiz")" />
+        <div class="ShowResult">
+        <p style="font-size:30px;text-align:center">Your Score:</p>
+        <p style="font-size:30px;text-align:center">@ViewBag.Score/@ViewBag.TotalScore</p>
+            </div>
+        <div style="position:absolute;top:40%">
+        <p style="font-size:20px">Total Questions: @ViewBag.TotalQues</p>
+        @*<p style="font-size:15px">No: Of Questions Answered: @ViewBag.AnsweredQues</p>*@
+        <p style="font-size:20px;color:cadetblue">No: Of Questions UnAnswered: @ViewBag.UnansweredQues</p>
+        <p style="font-size:20px;color:green">No: Of Correct Answers: @ViewBag.CorrectAnsw</p>
+        <p style="font-size:20px;color:red">No: Of Wrong Answers: @ViewBag.WrongAnsw</p>
+            </div>
+    </div>
+}
+

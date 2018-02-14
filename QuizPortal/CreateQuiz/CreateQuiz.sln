@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2012 for Web
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CreateQuiz", "CreateQuiz\CreateQuiz.csproj", "{384EA116-D698-445A-8827-5B05D4D75AFB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusinessLayer", "BusinessLayer\BusinessLayer.csproj", "{B7890B31-56B6-445A-97C2-400BC2B5087F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{384EA116-D698-445A-8827-5B05D4D75AFB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{384EA116-D698-445A-8827-5B05D4D75AFB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{384EA116-D698-445A-8827-5B05D4D75AFB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{384EA116-D698-445A-8827-5B05D4D75AFB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7890B31-56B6-445A-97C2-400BC2B5087F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7890B31-56B6-445A-97C2-400BC2B5087F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7890B31-56B6-445A-97C2-400BC2B5087F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7890B31-56B6-445A-97C2-400BC2B5087F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,10 @@
+C:\Users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache
+C:\Users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\saiteja\Desktop\CreateQuiz\BusinessLayer\bin\Debug\BusinessLayer.dll
+C:\Users\saiteja\Desktop\CreateQuiz\BusinessLayer\bin\Debug\BusinessLayer.pdb
+C:\Users\saiteja\Desktop\CreateQuiz\BusinessLayer\obj\Debug\BusinessLayer.dll
+C:\Users\saiteja\Desktop\CreateQuiz\BusinessLayer\obj\Debug\BusinessLayer.pdb
+C:\Users\saiteja\Desktop\CreateQuiz\BusinessLayer\obj\Debug\BusinessLayer.csprojResolveAssemblyReference.cache

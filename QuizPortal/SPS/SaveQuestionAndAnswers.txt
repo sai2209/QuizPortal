@@ -1,0 +1,14 @@
+ALTER procedure [dbo].[SaveQuestionAndAnswers]
+ @QuizName varchar(20),
+ @QuestionType varchar(10),
+ @Question varchar(100),
+ @Answer1 varchar(50),
+ @Answer2 varchar(50),
+ @Answer3 varchar(50),
+ @Answer4 varchar(50),
+ @CorrectAnswer varchar(50),
+ @points varchar(3)
+ as
+ begin
+  insert into QuestionAndAnswers(QuizName ,QuestionType ,Question,Answer1,Answer2,Answer3 ,Answer4 ,CorrectAnswer ,points) values (@QuizName ,@QuestionType ,@Question,@Answer1,@Answer2,@Answer3 ,@Answer4 ,@CorrectAnswer ,@points)
+ end

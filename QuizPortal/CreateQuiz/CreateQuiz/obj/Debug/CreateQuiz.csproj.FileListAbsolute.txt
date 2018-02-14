@@ -1,0 +1,44 @@
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\CreateQuiz.dll
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\CreateQuiz.pdb
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\Microsoft.Web.Infrastructure.dll
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\Newtonsoft.Json.dll
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.Helpers.dll
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.Mvc.dll
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.Razor.dll
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.Deployment.dll
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.dll
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.Razor.dll
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\Newtonsoft.Json.xml
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.Helpers.xml
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.Mvc.xml
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.Razor.xml
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.xml
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.Deployment.xml
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.Razor.xml
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\obj\Debug\CreateQuiz.csprojResolveAssemblyReference.cache
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\obj\Debug\CreateQuiz.dll
+c:\users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\obj\Debug\CreateQuiz.pdb
+C:\Users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\BusinessLayer.dll
+C:\Users\saiteja\documents\visual studio 2012\Projects\CreateQuiz\CreateQuiz\bin\BusinessLayer.pdb
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\CreateQuiz.dll
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\CreateQuiz.pdb
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\BusinessLayer.dll
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\Newtonsoft.Json.dll
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.Helpers.dll
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.Mvc.dll
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.Razor.dll
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.Deployment.dll
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.dll
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.Razor.dll
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\BusinessLayer.pdb
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\Newtonsoft.Json.xml
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.Helpers.xml
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.Mvc.xml
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.Razor.xml
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.xml
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.Deployment.xml
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\bin\System.Web.WebPages.Razor.xml
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\obj\Debug\CreateQuiz.csprojResolveAssemblyReference.cache
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\obj\Debug\CreateQuiz.dll
+C:\Users\saiteja\Desktop\CreateQuiz\CreateQuiz\obj\Debug\CreateQuiz.pdb

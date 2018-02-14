@@ -1,0 +1,256 @@
+﻿@model BusinessLayer.QuizSettings
+
+@{
+    ViewBag.Title = "OpenCreateQuiz";
+}
+<script src='@Url.Content("~/Scripts/jquery-1.8.2.js")' type='text/javascript'></script>
+<script src='@Url.Content("~/Scripts/jquery.validate.js")' type='text/javascript'></script>
+<script src='@Url.Content("~/Scripts/jquery.validate.unobtrusive.js")' type='text/javascript'></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+<script src="~/Scripts/MicrosoftAjax.js"></script>
+<script src="~/Scripts/MicrosoftMvcAjax.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="~/Js/OpenCreateQuiz.js"></script>
+<link rel="stylesheet" href="~/Css/Quiz.css">
+
+<script>
+    var QuizSettingsErrors = '@(ViewBag.NameError)';
+    var QuizTypeNull = '@(ViewBag.QuizTypeNull)';
+    var QuizGroupNull = '@(ViewBag.QuizGroupNull)';
+    var NameNull = '@(ViewBag.NameNull)';
+    var QuestionCreated = '@(ViewBag.QuestionCreated)';
+    var DisableSettings = '@(ViewBag.DisableSettings)';
+    var QandAMissingError = '@(ViewBag.QuesAnswerError)';
+    var ShowSettingsInformationPanel = '@(ViewBag.ShowSettingsInformationPanel)';
+    var ShowInstructionsInformationPanel = '@(ViewBag.ShowInstructionsInformationPanel)';
+</script>
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <div class="div" id="temp">
+        <h4>Quiz Options</h4>
+        <table>
+            <tr>
+                <td>
+            @Html.LabelFor(model => model.Quiztype)&nbsp;&nbsp;&nbsp;&nbsp;
+            @Html.DropDownList("Quiztype", new List<SelectListItem>{
+            new SelectListItem{Text="Graded Quiz",Value="Graded Quiz"},
+            new SelectListItem{Text="Practice Quiz", Value="Practice Quiz"},
+            new SelectListItem{Text="Graded Survey", Value="Graded Survey"},
+            new SelectListItem{Text="UnGraded Survey", Value="UnGraded Survey"}
+            }, "Select Type", new { @class = "Dropdown" })
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td>
+            @Html.LabelFor(model => model.QuizGroup)&nbsp;&nbsp
+            @Html.DropDownList("QuizGroup", new List<SelectListItem>{
+            new SelectListItem{Text="Library",Value="Library"},
+            new SelectListItem{Text="Assignment", Value="Assignment"},
+            new SelectListItem{Text="Test", Value="Test"},
+            new SelectListItem{Text="Discussion", Value="Discussion"},
+            new SelectListItem{Text="Total", Value="Total"}
+            }, "Select Group", new { @class = "Dropdown" })                   
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td>
+                    @Html.LabelFor(model => model.Name)&nbsp;&nbsp
+                    @Html.TextBoxFor(model => model.Name, new { @class = "Textboxdesign" })
+                  
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(model => model.Shuffleanswers, new { @class = "regular-checkbox" })
+                    @Html.LabelFor(model => model.Shuffleanswers)
+                    @Html.ValidationMessageFor(model => model.Shuffleanswers)
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(model => model.Timelimit, new { @class = "regular-checkbox" })
+                    @Html.LabelFor(model => model.Timelimit)
+                    @Html.ValidationMessageFor(model => model.Timelimit)&nbsp;&nbsp;&nbsp;&nbsp
+                    @Html.TextBoxFor(model => model.Minut,  new { type = "number", @class = "Textboxdesign", @style="width:40px;height:20px"})
+                    @Html.LabelFor(model => model.Minut)
+                    @Html.ValidationMessageFor(model => model.Minut)
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(model => model.Studentsseequiz, new { @class = "regular-checkbox" })
+                    @Html.LabelFor(model => model.Studentsseequiz)
+                    @Html.ValidationMessageFor(model => model.Studentsseequiz)
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td>Responses</td>
+            </tr>
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(model => model.Showcrctans, new { @class = "regular-checkbox" })
+                    @Html.LabelFor(model => model.Showcrctans)
+                    @Html.ValidationMessageFor(model => model.Showcrctans)
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(model => model.Allowmultattempt, new { @class = "regular-checkbox" })
+                    @Html.LabelFor(model => model.Allowmultattempt)
+                    @Html.ValidationMessageFor(model => model.Allowmultattempt)
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(model => model.Showoneques, new { @class = "regular-checkbox" })
+                    @Html.LabelFor(model => model.Showoneques)
+                    @Html.ValidationMessageFor(model => model.Showoneques)
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+
+            <tr>
+                <td>
+                    @Html.CheckBoxFor(model => model.RestQuiz, new { @class = "regular-checkbox" })
+                    @Html.LabelFor(model => model.RestQuiz)
+                    @Html.ValidationMessageFor(model => model.RestQuiz)
+                </td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+        <p>
+            <input type="submit" value="Save Settings" id="SaveSettings" class="button" formaction="@Url.Action("OpenCreateQuiz", "CreateQuiz", new { id = "save" })" />
+        </p>         
+    </div>
+    
+    <div id="errorpanel" class="mydiv">
+        <img src="/Images/close.jpg" onclick="javascript:HideErrorPanel()" style="float:right;padding-right:1px;padding-top:1px;" />
+       <h2 style="color:white;height:10px;text-align:center" >Error Panel </h2>
+
+    </div>
+    <div id="informationPanel" class="mydiv" style="color:white;left:78%">
+         <img src="/Images/close.jpg" onclick="javascript:HideInformationPanel()" style="float:right;padding-right:1px;padding-top:1px;" />
+       <h2 style="color:wheat;height:10px;text-align:center" >Information Panel </h2>
+    </div>
+    <div class="instructions" id="inst">
+        <h3 style="padding-left: 30%">Quiz Instructions</h3>
+        <p>"Please Enter your Instructions for the Quiz:"</p>
+        <div>
+            @Html.TextAreaFor(model => model.instructions, new { @class = "textarea", style = "width:100%;height:200px" })
+            @Html.ValidationMessageFor(model => model.instructions)
+            <p>
+                <input id="SaveInstr" type="submit" value="Save Instructions" class="button" disabled="disabled" formaction="@Url.Action("OpenCreateQuiz", "CreateQuiz", new { id = "ins" })" />
+            </p>
+        </div>
+            </div>
+
+    <div id="Add">
+            <p style="text-align: center">
+                <input type="button" id="newQues" value="Add New Question" class="button"  style="position:absolute;left:60%"  onclick="SaveAndNextButton()"/>
+                <input type="Submit" id="PublishQuiz" value ="Publish Quiz" class="button" disabled="disabled" style="position:absolute;left:75%" formaction="@Url.Action("Index", "CreateQuiz")" />
+            </p>
+    </div>
+    
+    <div id="QuesandAns" class="instructions" style="visibility:hidden">
+        <label id="QuizName" style="padding-left:219px;font-size:xx-large;color:indigo;font-weight:bolder"></label><br /><br />
+        <p style="font-size: large; font-weight: bolder;color: darkred;">Question: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp  Points:   @Html.TextBoxFor(model => model.Points, new { @class = "TextBox" }) &nbsp;&nbsp @Html.HiddenFor(model=>model.QuesID, new { id = "hdnQuesID"}) </p> 
+            
+         <div>
+            @Html.TextAreaFor(model => model.Question, new { @class="TextboxArea"})
+            @Html.ValidationMessageFor(model => model.Question)
+        </div>
+        <p>Answers:</p>
+        <table>
+            <tr>
+                <td><input type="radio" name="radiog_lite" id="1" value="1" class="css-checkbox" /><label for="1" class="css-label radGroup1">Option 1</label></td>
+                <td> @Html.TextBoxFor(model => model.Answer1, new { @class = "TextboxdesignAnsw"})</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td><input type="radio" name="radiog_lite" id="2" value="2" class="css-checkbox" checked="checked"/><label for="2" class="css-label radGroup1">Option 2</label></td>
+                <td> @Html.TextBoxFor(model => model.Answer2, new { @class = "TextboxdesignAnsw" })</td>
+                 @*@Html.ValidationMessageFor(model => model.Answer2)*@
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td><input type="radio" name="radiog_lite" id="3" value="3" class="css-checkbox" checked="checked"/><label for="3" class="css-label radGroup1">Option 3</label></td>
+                <td> @Html.TextBoxFor(model => model.Answer3, new { @class = "TextboxdesignAnsw" })</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+            <tr>
+                <td><input type="radio" name="radiog_lite" id="4" value="4" class="css-checkbox" checked="checked"/><label for="4" class="css-label radGroup1">Option 4</label></td>
+                <td> @Html.TextBoxFor(model => model.Answer4, new { @class = "TextboxdesignAnsw" })</td>
+            </tr>
+            <tr></tr>
+            <tr></tr>
+        </table>
+        <p><input type="submit" value="Create Question" id="CreateQues" class="button" formaction="@Url.Action("OpenCreateQuiz", "CreateQuiz", new { id = "QandA" })" /> <input type="submit" value="Update Question"id="UpdateQues" style="visibility:hidden" class="button" formaction="@Url.Action("OpenCreateQuiz", "CreateQuiz", new { id = "UpdateQandA" })" /></p>
+        
+    </div>
+    
+    <div  id="QuesForUpdate"  style="height:350px;overflow-y:auto;background-color:#f5d6d6;width:300px; visibility:hidden;position:absolute;right:16%;top:17%">
+        <h3>Edit Questions</h3>
+        <table>
+      @if(ViewBag.ListOfQues!=null)
+        {
+            foreach (var Ques in (List<BusinessLayer.QuizSettings>)ViewBag.ListOfQues)
+        {
+                
+                <tr>
+                    <td>@Ques.QuizID</td>
+                    <td>
+                        <a href="#" onclick= "javascript:EditQuestion('@Ques.Question','@Ques.Answer1','@Ques.Answer2','@Ques.Answer3','@Ques.Answer4','@Ques.CorrectAnswer','@Ques.Points','@Ques.QuizID')">@Ques.Question</a>
+                         </td>
+                </tr>
+               
+        }
+                
+        }
+            </table>
+        </div>
+    
+   
+        
+      
+}
+
+

@@ -1,0 +1,6 @@
+ALTER procedure [dbo].[CheckQuizName]
+@Name varchar(20)
+as
+begin
+select count(*) from QuizSettings where Name = @Name
+end
